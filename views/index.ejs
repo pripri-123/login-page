@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Job Platform - Login</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn-custom {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">Open Job Platform</div>
+
+        <!-- Navigation Bar -->
+        <nav>
+          <a href="/">Home</a>
+          <a href="/post-job">Post Job</a>
+          <a href="/browse-jobs">Browse Jobs</a>
+        </nav>
+
+
+
+        <!-- Login Section -->
+        <h4 class="text-center">Login</h4>
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <input type="text" name="username" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-custom">Login</button>
+        </form>
+
+        <hr>
+
+        <!-- Signup Section -->
+        <h4 class="text-center">Sign Up</h4>
+        <form action="/signup" method="POST">
+            <div class="mb-3">
+                <input type="text" name="newUsername" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Email" required> <!-- Added Email Field -->
+            </div>
+            <div class="mb-3">
+                <input type="password" name="newPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-custom">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+        
+
+
+
+        
+

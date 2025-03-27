@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js" defer></script>
+</head>
+<body>
+    <h1>Private Chat</h1>
+    
+    <!-- Hidden input to store logged-in user ID -->
+    <input type="hidden" id="userId" value="<%= user._id %>">
+
+    <label for="userSelect">Chat with:</label>
+    <select id="userSelect">
+        <% users.forEach(user => { %>
+            <option value="<%= user._id %>"><%= user.username %></option>
+        <% }); %>
+    </select>
+
+    <ul id="message-list"></ul>
+
+    <form id="message-form">
+        <input type="text" id="message-input" required>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
